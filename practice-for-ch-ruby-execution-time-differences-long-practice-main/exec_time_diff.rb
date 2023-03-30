@@ -30,20 +30,21 @@ def P1_LCS(arr)
 end
 
 def P2_LCS(arr)
-    current = 0
-    max = 
-    arr.each do |ele|
-        current = current + ele  
-        if current > max 
+    current = arr.first 
+    max = arr.first
+    (1...arr.length).each do |i|
+        if arr[i] >  (current + arr[i])
+            current = arr[i]
+        else  
+            current = current + arr[i]
+        end  
+        if max < current
             max = current 
-        end
+        end 
     end
-    if max == 0
-        return arr.max 
-    else 
-        return max 
-    end
+    max 
 end
+
 
 list2 = [5, 3, -7]
 list3 = [2, 3, -6, 7, -6, 7]
