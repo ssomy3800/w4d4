@@ -47,3 +47,17 @@ end
 
 # p fourth_anagram?("gizmo", "sally")    #=> false
 # p fourth_anagram?("elvis", "lives")    #=> true
+
+def bonus_anagram?(str1, str2)
+    count = Hash.new(0)
+
+    str1.each_char { |char| count[char] += 1 }
+
+    str2.each_char { |char| count[char] -= 1 }
+
+    count.all? { |k,v| v == 0}
+
+end
+
+p bonus_anagram?("gizmo", "sally")    #=> false
+p bonus_anagram?("elvis", "lives")    #=> true
