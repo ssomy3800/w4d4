@@ -15,7 +15,7 @@ def second_anagram?(str1, str2)
         if idx == nil 
             return false 
         else 
-            str2 = str2[0...idx] + str2[idx+1..-1]
+            str2 = str2[0...idx] + str2[idx+1..-1] # n + n(because of concat) + n
         end
 
     end
@@ -41,7 +41,7 @@ def fourth_anagram?(str1, str2)
     str1.each_char { |char| hash1[char] += 1 }
     str2.each_char { |char| hash2[char] += 1 }
 
-    hash1 == hash2
+    hash1 == hash2  #O(n)
 
 end
 

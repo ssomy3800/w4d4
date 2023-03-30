@@ -55,3 +55,13 @@ list4 = [-5, -1, -3]
 p P2_LCS(list2)
 p P2_LCS(list3)
 p P2_LCS(list4)
+
+
+
+ 1 2 3 4 5
+ i = 1
+
+ j = i + 1
+ arr[i] + arr[j..-1] arr[i+1...j]
+ 
+ arr[3..2]
